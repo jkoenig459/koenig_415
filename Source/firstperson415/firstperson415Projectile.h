@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UProjectileMovementComponent;
+class UNiagaraSystem;
 
 UCLASS(config=Game)
 class Afirstperson415Projectile : public AActor
@@ -23,19 +24,26 @@ class Afirstperson415Projectile : public AActor
 	UProjectileMovementComponent* ProjectileMovement;
 
 	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* ballMesh;
+		UStaticMeshComponent* ballMesh;
 
 	UPROPERTY(EditAnywhere)
-	UMaterial* baseMat;
+		UMaterial* baseMat;
 
 	UPROPERTY()
-	FLinearColor randColor;
+		FLinearColor randColor;
 
 	UPROPERTY(EditAnywhere)
-	UMaterialInterface* projMat;
+		UMaterialInterface* projMat;
 
 	UPROPERTY()
-	UMaterialInstanceDynamic* dmiMat;
+		UMaterialInstanceDynamic* dmiMat;
+
+	UPROPERTY(EditAnywhere)
+		UNiagaraSystem* colorP;
+
+	UPROPERTY()
+	bool bImpacted = false;
+
 
 public:
 	Afirstperson415Projectile();
