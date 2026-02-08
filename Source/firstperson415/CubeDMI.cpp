@@ -6,6 +6,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "Portal.h"
 
 class UNiagaraSystem;
 
@@ -71,4 +72,6 @@ void ACubeDMI::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* 
 		}
 	}
 }
+
+
 
